@@ -291,3 +291,129 @@ a{
         transform: translateX(-10px) translateY(1rem);
     }
   }
+
+  .project-section{
+    width: 100%;
+    background-color: rgb(231,231,231);
+    /* height: 500px; */
+  }
+
+  .project-section-header{
+    color: var(--bgOrange);
+    text-align: center;
+    padding-top: 30px;
+    font-size: 40px;
+  }
+
+  .project-container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 0;
+
+    display:flex;
+    flex-direction:column;
+    gap:120px;
+  }
+
+  .project-card{
+    width:90%;
+    height:550px;
+    background-image: url(./images/projects/Project1.png);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    position:relative;
+    box-shadow:0px 0px 40px #1f1f1f;
+  }
+
+  .project-card::before{
+    content: "";
+    background-color:#343d689a;
+    transform-origin: left;
+    transform: scaleX(0);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.8s linear;
+  }
+
+  .project-card::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #1f1f1f9a;
+    z-index:0;
+    /* transform: scaleX(1); */
+  }
+
+  .project-card:hover::before{
+    transform:scaleX(1);
+  }
+
+  .project-card:hover .project-number{
+    opacity: 1;
+  }
+
+  #project1{
+    background-image: url("./images/projects/Project1.png");
+    background-size: cover;
+  }
+
+  .project-skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  .project-skill{
+    width: 50px;
+  }
+
+  .project-number{
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+  }
+
+  .project-title{
+    font-size:50px;
+    font-weight: bold;
+    line-height:3rem;
+  }
+
+  .project-number-right{
+    right: -40px;
+    top: -40px;
+  }
+
+  .project-content{
+    display: flex;
+    position: absolute;
+    z-index: 9;
+    bottom: 20%;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+  }
+
+  .project-content-left{
+    left: 10%;
+  }
+
+  .project-content-right{
+    right: 10%;
+  }
+
+  .project-description{
+    width:70%;
+    font-size:16px;
+    font-style: italic;
+  }
